@@ -1,19 +1,22 @@
-<p id="notice"><%= notice %></p>
+<!-- <p id="notice"><%= notice %></p> -->
 
-<p>
-  <strong>Name:</strong>
-  <%= @idea.name %>
-</p>
+<div class="pull-right" style="margin-top:20px">
+	<%= link_to 'Edit', edit_idea_path(@idea), :class => "btn btn-sm btn-default" %> 
+	<%= link_to 'Back To List', ideas_path, :class => "btn btn-sm btn-success" %>
+</div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @idea.description %>
-</p>
+<div class="col-md-6" style="margin-top:20px">
+	<p>
+	  <%= image_tag(@idea.picture_url, width: 200) if @idea.picture.present? %>
+	</p>
 
-<p>
-  <strong>Picture:</strong>
-  <%= image_tag(@idea.picture_url, width: 200) if @idea.picture.present? %>
-</p>
+	<p>
+	  <strong>Name:</strong>
+	  <%= @idea.name %>
+	</p>
 
-<%= link_to 'Edit', edit_idea_path(@idea) %> |
-<%= link_to 'Back', ideas_path %>
+	<p>
+	  <strong>Description:</strong>
+	  <%= @idea.description %>
+	</p>
+</div>

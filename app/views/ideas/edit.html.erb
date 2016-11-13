@@ -1,6 +1,14 @@
-<h1>Editing Idea</h1>
+<div class="pull-right" style="margin-top:40px">
+<%= link_to 'Show', @idea, :class=>"btn btn-sm btn-default" %> 
+<%= link_to 'Back To List', ideas_path, :class=>"btn btn-sm btn-success" %>
+</div>
+
+<div class="col-md-6">
+<h1>Edit Idea</h1>
 
 <%= render 'form' %>
+</div>
 
-<%= link_to 'Show', @idea %> |
-<%= link_to 'Back', ideas_path %>
+
+
+
