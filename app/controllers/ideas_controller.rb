@@ -4,7 +4,6 @@ class IdeasController < ApplicationController
   # GET /ideas
   # GET /ideas.json
   def index
-    # @ideas = Idea.all
     @ideas = current_user.ideas
   end
 
